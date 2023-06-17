@@ -9,23 +9,23 @@ int main(void)
 	int i;
 	int j;
 
-	for (i = 48; i < 59; i++)
+	for (i = 1; i <= 98; i++)
 	{
-		if (i != 58)
+		for (j = i + 1; j <= 99; j++)
 		{
-			for (j = 48; j < 59; j++)
-			{
-				if (j != 58)
-				{
-					putchar(i);
+			putchar('0' + i / 10);
 
-					putchar(j);
+			putchar('0' + i % 10);
 
-					putchar(',');
+			putchar(' ');
 
-					putchar(' ');
-				}
-			}
+			putchar('0' + j / 10);
+
+			putchar('0' + j % 10);
+
+			putchar(',');
+
+			putchar(' ');
 		}
 	}
 	putchar('\n');
