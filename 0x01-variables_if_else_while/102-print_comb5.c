@@ -23,9 +23,12 @@ int main(void)
 
 			putchar('0' + j % 10);
 
-			putchar(',');
+			if (i != 98 || j != 99)
+			{
+				putchar(',');
 
-			putchar(' ');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
