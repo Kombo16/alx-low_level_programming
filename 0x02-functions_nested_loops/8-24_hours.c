@@ -20,7 +20,6 @@ void jack_bauer(void)
 			_putchar('0' + j % 10);
 			if (i != 23 || j != 59)
 			{
-				_putchar(' ');
 				_putchar('\n');
 			}
 		}
