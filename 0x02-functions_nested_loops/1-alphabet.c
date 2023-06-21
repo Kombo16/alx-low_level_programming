@@ -1,24 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 /**
- *main - Function to print alphabet
- *Return:0 success
- */
-void print_alphabet(void);
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-/**
- *print_alphabet - Function to loop through the alphabet
- *void - no specific value set
+ *print_alphabet - Function to loop through the alphabe
  */
 void print_alphabet(void)
 {
 	char ch;
 
 	for (ch = 'a'; ch <= 'z'; ch++)
-		putchar(ch);
-	putchar('\n');
+		_putchar(ch);
+	_putchar('\n');
 }
