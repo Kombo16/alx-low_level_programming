@@ -3,7 +3,6 @@
 /**
  *print_triangle - Function that prints a triangle
  *@size: The size of the triangle
- *Return: Always 0
  *
  */
 
