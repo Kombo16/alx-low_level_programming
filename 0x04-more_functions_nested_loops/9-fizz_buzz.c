@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -23,11 +24,15 @@ int main(void)
 		{
 			printf("FizzBuzz");
 		}
+		else if (i == 1)
+		{
+			printf("%d", i);
 		else
 		{
-			printf("%d ", i);
+			printf(" %d", i);
 		}
 	}
 	printf("\n");
+
 	return (0);
 }
