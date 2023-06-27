@@ -9,11 +9,6 @@
 
 void puts2(char *str)
 {
-	if (str == NULL);
-	{
-		return;
-	}
-
 	int index = 0;
 
 	while (*str != '\0')
