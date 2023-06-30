@@ -9,15 +9,24 @@
 
 char *cap_string(char *s)
 {
-	int index = 0;
+	int index = 0,i;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (s[index])
+	if (s[index] >= 97 && s[index] <= 122)
+		s[index] = s[index] - 32;
+	index++;
+	while (s[index] != '\0') 
 	{
-		while (!(s[index] >= 'a' && s[index] <= 'z'))
-			index++;
-		if (str[index - 
+		for (i = 0; i < 13; i++)
+		{
+			if (s[index] == sep_words[i])
+			{
+				if (s[index + 1] >= 97 && s[index + 1] <= 122)
+					s[index + 1] == s[index + 1] - 32;
+				break;
+			}
 		}
-		index++;
+	index++;
 	}
 	return (s);
 }
