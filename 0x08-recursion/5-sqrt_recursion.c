@@ -3,7 +3,7 @@
 int actual_sqrt_recursion(int n, int i);
 
 /**
- *_sqrt_reqursion - Function that returns natural square root of number
+ *_sqrt_recursion - Function that returns natural square root of number
  *@n: number to calculate square root
  *Return: resulting square root
  *
@@ -17,7 +17,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- *actual_sqrt_recursion - Function that recurses to 
+ *actual_sqrt_recursion - Function that recurses to
  *find natural square root of number
  *@n: number to calculate square root
  *@i: iterator
