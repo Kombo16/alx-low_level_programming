@@ -7,15 +7,15 @@
  *
  */
 
-int _abs(int c)
+int _abs(int n)
 {
-	if (c < 0)
+	if (n < 0)
 	{
 		int a;
 
-		a = c * -1;
+		a = n * -1;
 		return (a);
 	}
 	else
-		return (c);
+		return (n);
 }
