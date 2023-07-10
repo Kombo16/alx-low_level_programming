@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ *_atoi - Function that converts string to integer
+ *@s: pointer to  a string
+ *Return: 0 success
  *
  */
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			mul = _atoi(argv[i]) * _atoi(argv[i]);
+			mul = _atoi(argv[1]) * _atoi(argv[2]);
 		}
 		printf("%d\n", mul);
 	}
