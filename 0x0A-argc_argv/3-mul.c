@@ -51,20 +51,18 @@ int _atoi(char *s)
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int num1, num2, mul;
+	int num1, num2, num3,  mul;
 
-	if (argc < 3 || argc > 3)
+	if (argc < 3 || argc > 4)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		num1 = _atoi(argv[1]);
-		num2 = _atoi(argv[2]);
-		mul = num1 * num2;
-	}
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	num3 = _atoi(argv[3]);
+	mul = num1 * num2 * num3;
+
 	printf("%d\n", mul);
 	return (0);
 }
