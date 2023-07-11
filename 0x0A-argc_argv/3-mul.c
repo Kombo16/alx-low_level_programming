@@ -52,7 +52,7 @@ int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 	int i;
-	int mul = 0;
+	int num1, num2, mul;
 
 	if (argc < 3 || argc > 3)
 	{
@@ -61,7 +61,9 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		mul = _atoi(argv[1]) * _atoi(argv[2]);
+		num1 = _atoi(argv[1]);
+		num2 = _atoi(argv[2]);
+		mul = num1 * num2;
 	}
 	printf("%d\n", mul);
 	return (0);
