@@ -44,6 +44,6 @@ char *str_concat(char *s1, char *s2)
 		i++;
 		cl++;
 	}
-	conc[i] == '\0';
+	conc[i] = '\0';
 	return (conc);
 }

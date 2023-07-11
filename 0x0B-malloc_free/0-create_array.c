@@ -5,7 +5,7 @@
  *create_array - Function that creates an array of chars
  *@size: number of bytes
  *@c: character;
- *Return: 0 success
+ *Return: string
  *
  */
 
@@ -20,5 +20,5 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	for (i = 0; i < size; i++)
 		str[i] = c;
-	return (0);
+	return (str);
 }
