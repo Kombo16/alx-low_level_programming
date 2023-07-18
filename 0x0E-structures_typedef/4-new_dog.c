@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "dog.h"
 
 /**
- *new_dog - Function that creates a new_dog
+ *new_dog - Function that creates a new dog
  *@name: name of dog
  *@age: age of dog
  *@owner: owner of dog
- *Return: new dog NULL if function fail
+ *Return:pointer to struct new_dog NULL if function fail
  *
  */
 
