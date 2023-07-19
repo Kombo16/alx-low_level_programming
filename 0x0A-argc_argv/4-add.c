@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
  *main - main function to add integers
@@ -17,12 +17,12 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (!_atoi(argv[i]))
+			if (!atoi(argv[i]))
 			{
 				printf("Error\n");
 				return (1);
 			}
-			sum += _atoi(argv[i]);
+			sum += atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
