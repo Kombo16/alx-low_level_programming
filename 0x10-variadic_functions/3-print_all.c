@@ -24,7 +24,7 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 	int i = 0;
 
-	if (format)
+	if (*format)
 	{
 		while (format[i])
 		{
