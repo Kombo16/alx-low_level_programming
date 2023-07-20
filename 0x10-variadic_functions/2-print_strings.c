@@ -7,6 +7,8 @@
  *@separator: separates the parameters
  *@n: number of arguments
  *
+ *Description: if separator is NULL,it is not printed
+ *
  *
  */
 
