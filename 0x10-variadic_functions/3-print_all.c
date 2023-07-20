@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 	double d;
 	char *str;
 	char *sep = "";
-	int i;
+	int i = 0;
 
 	while (format[i])
 	{
