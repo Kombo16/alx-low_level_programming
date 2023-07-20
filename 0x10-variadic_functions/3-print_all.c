@@ -15,11 +15,10 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 
-	va_start(args, format);
-
-	char *str;
-	char *sep = "";
+	char *str, *sep = "";
 	int i = 0;
+
+	va_start(args, format);
 
 	if (format)
 	{
@@ -39,7 +38,7 @@ void print_all(const char * const format, ...)
 				case 's':
 					str = va_arg(args, char *);
 					if (!str)
-						printf("(nil)");
+						str = "(nil)";
 					printf("%s%s", sep, str);
 					break;
 				default:
