@@ -22,34 +22,37 @@ void print_all(const char * const format, ...)
 	double d;
 	char *str;
 	char *sep = "";
-	const char *ptr = format;
+	int i = 0;
 
-	while (*ptr != '\0')
+	if (format)
 	{
-		if (*ptr == 'c')
+		while (format[i])
 		{
-			ch = va_arg(args, int);
-			printf("%s%c", sep, ch);
-		}
-		else if (*ptr == 'i')
-		{
-			n = va_arg(args, int);
-			printf("%s%d", sep, n);
-		}
-		else if (*ptr == 'f')
-		{
-			d = va_arg(args, double);
-			printf("%s%f", sep, d);
-		}
-		else if (*ptr == 's')
-		{
-			str = va_arg(args, char *);
-			if (str == NULL)
-				printf("(nil)");
-			printf("%s%s", sep, str);
+			switch (format[i])
+				case 'c';
+					ch = va_arg(args, int);
+					printf("%s%c", sep, ch);
+					break;
+				case 'i':
+					n = va_arg(args, int);
+					printf("%s%d", sep, n);
+					break;
+				case  'f':
+					d = va_arg(args, double);
+					printf("%s%f", sep, d);
+					break;
+				case 's';
+					str = va_arg(args, char *);
+					if (str == NULL)
+						printf("(nil)");
+					printf("%s%s", sep, str);
+					break;
+				default;
+					i++;
+					continue;
 		}
 		sep = ", ";
-		ptr++;
+		i++;
 	}
 	va_end(args);
 	printf("\n");

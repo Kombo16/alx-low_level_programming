@@ -6,14 +6,12 @@
  *sum_them_all - Function that returns sum of parameters
  *@n: number of parameters passed
  *@...: variable number of parameters
- *Return: sum of parameters
+ *Return: sum of parameters else 0 if n == 0
  *
  */
 
 int sum_them_all(const unsigned int n, ...)
 {
-	if (n == 0)
-		return (0);
 	va_list ap;
 	unsigned int index;
 	int sum = 0;
