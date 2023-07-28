@@ -4,28 +4,6 @@
 #include <string.h>
 
 /**
- *print_list - prints all elements of list
- *@h: pointer to list_t
- *Return: no of nodes(value
- *stored in data type size_t )
- *
- */
-size_t print_list(const list_t *h)
-{
-	size_t s = 0;
-
-	while (h)
-	{
-		if (!h->str)
-			printf("[0] (nil)\n");
-		printf("[%u] %s\n", h->len, h->str);
-		h = h->next;
-		s++;
-	}
-	return (s);
-
-}
-/**
  *add_node_end - adds a new node to list_t
  *@head: pointer to pointer to list_t(the list)
  *@str: string to put in new node
