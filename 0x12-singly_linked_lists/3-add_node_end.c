@@ -21,6 +21,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		len++;
 	/*Allocate memory*/
 	new_node  = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
 	/*put in data*/
 	new_node->str = strdup(str);
 	new_node->len = len;
@@ -33,7 +35,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (new_node);
 	}
 	/*if list is not empty, move till last node*/
-	while (last_node->next != NULL)
+	while (last_node->next)
 		last_node = last_node->next;
 	/*change next of last node*/
 	last_node->next = new_node;
