@@ -11,6 +11,7 @@
 void free_list(list_t *head)
 {
 	list_t *new_node;
+
 	while (head)
 	{
 		/*Assign next of head to new node*/
