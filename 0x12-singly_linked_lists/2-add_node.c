@@ -2,26 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
-/**
- *print_list - displays list
- *@h: pointer to list list_h
- *Return: no of nodes
- */
-size_t print_list(const list_t *h)
-{
-	size_t s = 0;
-
-	while (h)
-	{
-		if (!h->str)
-			printf("[0] (nil)\n");
-		printf("[%u] %s\n", h->len, h->str);
-		h = h->next;
-		s++;
-	}
-	return (s);
-}
 /**
  *add_node - Adds a new node at beginning of list
  *@head: pointer to pointer to head of list
