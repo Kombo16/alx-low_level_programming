@@ -34,15 +34,15 @@ size_t print_list(const list_t *h)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-
+	list_t *new_node;
+	/*Assign head to last node*/
+	list_t *last_node = *head;
 	unsigned int len = 0;
 
 	while (str[len] != 0)
 		len++;
 	/*Allocate memory*/
-	list_t *new_node  = malloc(sizeof(list_t));
-	/*Assign head to last node*/
-	list_t *last_node = (*head);
+	new_node  = malloc(sizeof(list_t));
 	/*put in data*/
 	new_node->str = strdup(str);
 	new_node->len = len;
