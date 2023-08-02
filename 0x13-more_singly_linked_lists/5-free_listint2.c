@@ -11,12 +11,12 @@ void free_listint2(listint_t **head)
 {
 	listint_t *new_node;
 	listint_t *current_node = *head;
-	
+
 	/*check if list is empty*/
 	if (head == NULL)
 		return;
 	/*while list is not empty*/
-	while (current_node)
+	while (current_node != NULL)
 	{
 		/*assign next of head to new node*/
 		new_node = current_node->next;
