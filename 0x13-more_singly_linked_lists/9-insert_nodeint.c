@@ -52,4 +52,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			prev_node->next = new_node;
 			return (new_node);
 		}
-		}
+		/*move to next node*/
+		current = current->next;
+		/*increment*/
+		count++;
+	}
+	return (NULL);
+}
