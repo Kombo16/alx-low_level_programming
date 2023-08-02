@@ -34,11 +34,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (count == index - 1)
 		{
 			prev_node = next_node;
-			/*if next of prev node points to NULL*/
+			/*if next of p node points to NULL*/
 			if (prev_node->next == NULL)
 				return (-1);
-			/*point next of prev node*/
+			/*point next of prev node to next node*/
+			next_node = prev_node->next;
 			prev_node->next = next_node->next;
+			/*remove what target node is pointing to*/
+			next_node->next = NULL;
 			/*free unused memory*/
 			free(next_node);
 			return (1);
