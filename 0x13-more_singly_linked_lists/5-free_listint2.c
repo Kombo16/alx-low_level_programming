@@ -12,6 +12,8 @@ void free_listint2(listint_t **head)
 	listint_t *new_node;
 	listint_t *current_node = *head;
 
+	if (head == NULL)
+		return;
 	/*while list is not empty*/
 	while (current_node != NULL)
 	{
@@ -22,6 +24,6 @@ void free_listint2(listint_t **head)
 		/*make new node be head*/
 		current_node = new_node;
 	}
-	/*set head to NULL*/
+	/*set head to NULL to indicate empty list*/
 	*head = NULL;
 }
