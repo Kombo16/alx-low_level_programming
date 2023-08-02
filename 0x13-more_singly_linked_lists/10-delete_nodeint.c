@@ -24,7 +24,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		/*move head to point to next node*/
 		*head = next_node->next;
-		/*free unused memory*/
 		free(next_node);
 		return (1);
 	}
@@ -34,7 +33,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (count == index - 1)
 		{
 			prev_node = next_node;
-			/*if next of p node points to NULL*/
+			/*if next of prev node points to NULL*/
 			if (prev_node->next == NULL)
 				return (-1);
 			/*point next of prev node to next node*/
@@ -51,6 +50,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		/*increment*/
 		count++;
 	}
-	/*index is greater than no of nodes*/
 	return (-1);
 }
