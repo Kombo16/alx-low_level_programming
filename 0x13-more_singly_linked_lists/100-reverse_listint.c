@@ -10,7 +10,6 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *next = NULL;
 	listint_t *current = *head;
 	listint_t *prev = NULL;
 
@@ -20,11 +19,11 @@ listint_t *reverse_listint(listint_t **head)
 	/*Traverse through the list*/
 	while (current != NULL)
 	{
-		next = current->next;
+		*head = current->next;
 		/*make last node point to prev node*/
 		current->next = prev;
 		prev = current;
-		current = next;
+		current = *head;
 	}
 	*head = prev;
 	return (*head);
