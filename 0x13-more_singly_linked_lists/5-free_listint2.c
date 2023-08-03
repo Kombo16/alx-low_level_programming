@@ -12,7 +12,7 @@ void free_listint2(listint_t **head)
 	listint_t *new_node;
 	listint_t *current_node = *head;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 		return;
 	/*while list is not empty*/
 	while (current_node != NULL)
