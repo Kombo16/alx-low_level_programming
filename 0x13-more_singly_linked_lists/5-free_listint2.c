@@ -10,12 +10,12 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *new_node;
-	listint_t *current_node = *head;
+	listint_t *current_node;
 
 	if (head == NULL || *head == NULL)
 		return;
 	/*point current to head of list*/
-	current = *head;
+	current_node  = *head;
 	/*while list is not empty*/
 	while (current_node != NULL)
 	{
