@@ -33,5 +33,6 @@ ssize_t copy_contents(const char *filesrc, const char *filedest)
 	fp2 = open(filedest, O_RDWR | O_CREAT | O_TRUNC);
 	{
 
+
 	}
 }
