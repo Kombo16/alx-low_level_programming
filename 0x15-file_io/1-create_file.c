@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content != NULL)
 	{
 		text_length = strlen(text_content);
-		byteswritten = write(STDOUT_FILENO, text_content, text_length);
+		byteswritten = write(STDIN_FILENO, text_content, text_length);
 		if (byteswritten == -1 || (size_t)byteswritten != text_length)
 		{
 			close(fd);
