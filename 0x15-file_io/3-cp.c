@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd_2);
 		exit(98);
 	}
-	byteswritten = write(STDIN_FILENO, buffer, bytesread);
+	byteswritten = write(fd_2, buffer, bytesread);
 	while (bytesread > 0)
 	{
 		if (byteswritten == -1 || byteswritten != bytesread)
