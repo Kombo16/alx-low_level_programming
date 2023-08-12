@@ -19,12 +19,14 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	if (text_content != NULL)
-	text_length = strlen(text_content);
-	byteswritten = write(fd, text_content, text_length);
-	if (byteswritten == -1 || (size_t)byteswritten != text_length)
 	{
-		close(fd);
-		return (-1);
+		text_length = strlen(text_content);
+		byteswritten = write(fd, text_content, text_length);
+		if (byteswritten == -1 || (size_t)byteswritten != text_length)
+		{
+			close(fd);
+			return (-1);
+		}
 	}
 	close(fd);
 	return (1);
