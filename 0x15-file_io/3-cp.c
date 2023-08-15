@@ -3,7 +3,7 @@
  *main - Main function
  *@argc: argument count
  *@argv: argument vector
- *Return:
+ *Return: 0 successful
  *
  */
 int main(int argc, char **argv)
