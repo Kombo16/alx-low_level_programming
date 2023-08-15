@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -35,8 +35,8 @@ int main(int argc, char **argv)
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
 	if (fd_2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %d\n", fd_2);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %d\n", fd_2);
+		exit(99);
 	}
 	byteswritten = write(fd_2, buffer, bytesread);
 	while (bytesread > 0)
